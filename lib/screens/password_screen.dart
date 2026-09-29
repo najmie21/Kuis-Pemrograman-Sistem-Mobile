@@ -16,12 +16,20 @@ class PasswordScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const PrimaryFont('Masukkan email Anda untuk reset password.'),
+            const PrimaryFont('Silahkan buat password baru untuk akun anda.', fontSize: 16),
             const SizedBox(height: 20),
+    
             const PrimaryTextfield(hintText: 'Email'),
+            const SizedBox(height: 15),
+            
+            const PrimaryTextfield(hintText: 'Password Baru', isPassword: true),
+            const SizedBox(height: 15),
+            
+            const PrimaryTextfield(hintText: 'Konfirmasi Password Baru', isPassword: true),
             const SizedBox(height: 30),
+
             PrimaryButton(
-              label: 'Kirim Link Reset',
+              label: 'Simpan Password',
               onPressed: () {
                 Get.back(); // Kembali ke halaman Login
               },
